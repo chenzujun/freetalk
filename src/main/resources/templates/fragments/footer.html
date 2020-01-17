@@ -1,0 +1,37 @@
+<!--
+  ~ Copyright (c) 2005-2018.  FPX and/or its affiliates. All rights reserved.
+  ~ Use, Copy is subject to authorized license.
+  -->
+
+<footer class="main-footer" th:fragment="footer">
+
+    <!--ued js-->
+    <script src="http://static.i4px.com/fpxres/jquery/lastest/jquery.js"></script>
+    <script src="http://static.i4px.com/fpxres/bootstrap/lastest/js/bootstrap.js"></script>
+    <script src="http://static.i4px.com/fpxres/noty/lastest/jquery.noty.js"></script>
+    <script src="http://static.i4px.com/fpxres/layer/lastest/layer.js"></script>
+    <script src="http://static.i4px.com/fpxres/sticky/lastest/jquery.sticky.js"></script>
+    <script src="http://static.i4px.com/fpxres/form/lastest/jquery.form.js"></script>
+    <script src="http://static.i4px.com/fpxres/validation/lastest/jquery.validate.js"></script>
+    <script src="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.base.js"></script>
+    <script src="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.plugin.js"></script>
+    <script src="http://static.i4px.com/fpxres/datatables/lastest/jquery.dataTables.js" ></script>
+    <script src="http://static.i4px.com/fpxres/datatables/lastest/dataTables.bootstrap.js"></script>
+
+    <script src="plugins/validate/jquery.qtip.min.js" th:src="@{/plugins/validate/jquery.qtip.min.js}"></script>
+    <script src="plugins/validate/fpx.tip.js" th:src="@{/plugins/validate/fpx.tip.js}" ></script>
+    <script src="plugins/validate/fpx.validation.js" th:src="@{/plugins/validate/fpx.validation.js}" ></script>
+    <script src="js/led.common.js" th:src="@{/js/led.common.js}" ></script>
+
+    <!--<a th:if="${#locale.getCountry().equals('US')}">-->
+    <!--<script src="js/i18n/messages_en_US.js" th:src="@{/js/i18n/messages_en_US.js}"></script>-->
+    <!--</a>-->
+    <!--<a th:if="${#locale.getCountry().equals('CN')}">-->
+    <!--<script src="js/i18n/messages_zh_CN.js" th:src="@{/js/i18n/messages_zh_CN.js}"></script>-->
+    <!--</a>-->
+
+    <div class="pull-right hidden-xs">
+        <b>Version</b> 1.13.0
+    </div>
+    <strong>Copyright © 2017-2018 4PX </strong> All rights reserved.粤ICP备12019163号-7
+</footer>

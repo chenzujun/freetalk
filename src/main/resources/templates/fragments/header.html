@@ -1,0 +1,287 @@
+<header class="main-header" th:fragment="header">
+
+    <ul class="nav navbar-nav topnavbar clearfix">
+        <li>
+            <a href="http://home.dev.4px.com/" class="fpx-logo">
+                <i class="iconfont icon-home"></i>
+            </a>
+        </li>
+        <li>
+            <a th:href="@{/dashboard}">
+                <span th:text="#{header.title}"></span>
+                <input type="hidden" style="display: none" id="locale" name="locale"
+                       th:value="${#locale.getCountry()}"/>
+
+            </a>
+        </li>
+        <li>
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                <span th:text="#{dashboard.tiles.header.product}"></span>
+                <i class="iconfont icon-triangledown"></i>
+            </a>
+
+            <div id="fpx-topmenu" class="dropdown-menu topbar-nav-list topbar-clearfix"></div>
+        </li>
+    </ul>
+
+    <!-- Header Navbar -->
+    <nav class="navbar navbar-static-top" role="navigation">
+        <i class="iconfont icon-sanshuxian sidebar-toggle" data-toggle="offcanvas" role="button"></i>
+        <div class="navbar-custom-menu">
+            <ul class="nav navbar-nav">
+                <li class="dropdown messages-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-email"></i>
+                        <span class="label label-success">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">你有0条消息未阅读</li>
+                        <li>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <h5>
+                                            暂时没有新的消息
+                                        </h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">查看所有消息</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown notifications-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-setting"></i>
+                        <span class="label label-warning">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">你有0条通知</li>
+                        <li>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <h5>
+                                            暂时没有新的通知
+                                        </h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">查看所有通知</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown tasks-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <i class="iconfont icon-flag"></i>
+                        <span class="label label-danger">0</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="header">你有0个工作任务未做</li>
+                        <li>
+                            <ul class="menu">
+                                <li>
+                                    <a href="#">
+                                        <h5>
+                                            暂时没有新的任务
+                                        </h5>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
+                        <li class="footer">
+                            <a href="#">查看所有任务</a>
+                        </li>
+                    </ul>
+                </li>
+                <li class="dropdown user user-menu">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">
+                        <img src="http://static.4px.com/fpxres/images/lastest/default_user.png" class="user-image"
+                             alt="User Image"/>
+                        <span class="hidden-xs fpx-account" th:text="${session.userName}"></span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li class="user-header">
+                            <img src="http://static.4px.com/fpxres/images/lastest/default_user.png" class="img-circle"
+                                 alt="User Image"/>
+                            <p>
+                            <h4>
+                                <div class="fpx-account">4px</div>
+                            </h4>
+                            </p>
+                        </li>
+                        <li class="user-footer text-center">
+                            <a class="btn btn-primary btn-flat btn-logout"
+                               th:href="@{${session.usercenter}+'/user/changemypwd?redirectURL='+${session.caseclient}}"
+                               th:text="#{button.modifyPwd}"></a>
+                            <a class="btn btn-default btn-flat btn-logout" th:href="@{/logout}"
+                               th:text="#{button.logout}"></a>
+                        </li>
+                    </ul>
+                </li>
+
+                <li>
+                    <a href="#" data-toggle="control-sidebar"><i class="iconfont icon-setting"></i></a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- Control Sidebar -->
+    <aside class="control-sidebar control-sidebar-dark">
+        <!-- Create the tabs -->
+        <ul class="nav nav-tabs nav-justified control-sidebar-tabs">
+            <li class="active">
+                <a href="#control-sidebar-home-tab" data-toggle="tab"><i class="iconfont icon-skin"></i></a>
+            </li>
+            <li>
+                <a href="#control-sidebar-settings-tab" data-toggle="tab"><i class="iconfont icon-i18n"></i></a>
+            </li>
+        </ul>
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <!-- Home tab content -->
+            <div class="tab-pane active" id="control-sidebar-home-tab">
+                <h3 class="control-sidebar-heading">Recent Activity</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="menu-icon fa fa-birthday-cake bg-red"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Langdon's Birthday</h4>
+
+                                <p>Will be 23 on April 24th</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="menu-icon fa fa-user bg-yellow"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Frodo Updated His Profile</h4>
+
+                                <p>New phone +1(800)555-1234</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="menu-icon fa fa-envelope-o bg-light-blue"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Nora Joined Mailing List</h4>
+                                <p>nora@example.com</p>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <i class="menu-icon fa fa-file-code-o bg-green"></i>
+
+                            <div class="menu-info">
+                                <h4 class="control-sidebar-subheading">Cron Job 254 Executed</h4>
+
+                                <p>Execution time 5 seconds</p>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+                <h3 class="control-sidebar-heading">Tasks Progress</h3>
+                <ul class="control-sidebar-menu">
+                    <li>
+                        <a href="javascript:void(0);">
+                            <h4 class="control-sidebar-subheading">
+                                Custom Template Design
+                                <span class="label label-danger pull-right">70%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-danger" style="width: 70%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <h4 class="control-sidebar-subheading">
+                                Update Resume
+                                <span class="label label-success pull-right">95%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-success" style="width: 95%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <h4 class="control-sidebar-subheading">
+                                Laravel Integration
+                                <span class="label label-warning pull-right">50%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-warning" style="width: 50%"></div>
+                            </div>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <h4 class="control-sidebar-subheading">
+                                Back End Framework
+                                <span class="label label-primary pull-right">68%</span>
+                            </h4>
+
+                            <div class="progress progress-xxs">
+                                <div class="progress-bar progress-bar-primary" style="width: 68%"></div>
+                            </div>
+                        </a>
+                    </li>
+                </ul>
+                <!-- /.control-sidebar-menu -->
+
+            </div>
+            <!-- /.tab-pane -->
+            <!-- Settings tab content -->
+            <div class="tab-pane" id="control-sidebar-settings-tab">
+                <form method="post">
+                    <h3 class="control-sidebar-heading">Language Settings</h3>
+
+                    <div class="form-group">
+                        <div class="col-md-6 text-center">
+                            <a href="?lang=zh_CN"
+                               class="clearfix full-opacity-hover text-center"
+                               style="display:
+                            block; box-shadow: 0
+                            0 3px rgba(0,0,0,0.4)">
+                                <img src="http://static.4px.com/fpxres/images/lastest/zh.jpg"/>
+                                <h6 style="color: #fff;">简体中文</h6>
+                            </a>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <a href="?lang=en_US"
+                               class="clearfix full-opacity-hover text-center"
+                               style="display:
+                            block; box-shadow: 0
+                            0 3px rgba(0,0,0,0.4)">
+                                <img src="http://static.4px.com/fpxres/images/lastest/en.jpg"/>
+                                <h6 style="color: #fff;">English</h6>
+                            </a>
+                        </div>
+                    </div>
+
+                </form>
+            </div>
+            <!-- /.tab-pane -->
+        </div>
+    </aside>
+    <!-- /.control-sidebar -->
+</header>
+

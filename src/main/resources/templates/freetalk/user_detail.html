@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout"
+      lang="en">
+<head th:include="layout :: htmlhead" th:with=" title='任务单详情'">
+</head>
+<section layout:fragment="js_layout">
+    <script defer="defer" src="plugins/jquery-migrate-1.2.1.min.js"
+            th:src="@{/plugins/jquery-migrate-1.2.1.min.js}"></script>
+    <script defer="defer" th:src="@{/js/freetalk/freetalk.js}"></script>
+</section>
+<section layout:fragment="content">
+    <div class="content-wrapper" style="min-height: 838px;">
+        <div id="sticky-wrapper" class="sticky-wrapper" style="height: 60px;">
+            <section class="content-header pin" style="width: 100%;">
+                <span class="nav-title" th:text="用户详情"></span>
+            </section>
+
+            <section class="content">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="box box-info">
+                            <div class="box-header with-border">
+                                <h3 class="box-title">
+                                    <spring:message code="user.title"/>
+                                </h3>
+                            </div>
+                            <div class="box-body">
+                                <div class="row">
+                                    <div class="form-group col-md-6">
+                                        <label class="col-md-4 control-label text-right" style="font-size:23px"
+                                               th:text="登录名+':'">&nbsp;:</label>
+                                        <label class="col-md-8" style="font-size:23px"
+                                               th:text="${userInfo.userName}"></label>
+                                    </div>
+                                    <div class="form-group col-md-6" style="font-size:23px">
+                                        <label class="col-md-4 control-label text-right"
+                                               th:text="昵称+':'">&nbsp;:</label>
+                                        <label class="col-md-8" style="font-size:23px"
+                                               th:text="${userInfo.nickName}"></label>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</section>
+</html>

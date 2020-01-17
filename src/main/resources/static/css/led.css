@@ -1,0 +1,75 @@
+/**override ued css**/
+.main-header {
+    z-index: 999;
+}
+
+.layui-layer-iframe .layui-layer-btn, .layui-layer-page .layui-layer-btn {
+    border-top: 1px solid rgba(179, 179, 179, 0.32);
+}
+
+.layui-layer-title {
+    box-shadow: 0px 1px 0px rgba(179, 179, 179, 0.32);
+    -webkit-box-shadow: 0px 1px 0px rgba(179, 179, 179, 0.32);
+    -moz-box-shadow: 0px 1px 0px rgba(179, 179, 179, 0.32);
+}
+
+th, td {
+    text-align: center;
+    vertical-align: middle !important;
+}
+
+textarea {
+    border: 1px solid #d2d6de;
+    border-radius: 4px;
+    resize: none;
+    padding: 10px;
+}
+
+.gridNum label {
+    width: 11.7%;
+    text-align: left !important;
+    cursor: pointer;
+}
+
+.ce-valid-error {
+    border-color: #A94442 !important;
+}
+
+.fpx .form-control.valid {
+    border-color: #d2d6de !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+/**led css**/
+.sort-line {
+    font-size: 16px;
+    border-left: 4px solid rgba(120, 197, 231, 1);
+    padding-left: 6px;
+    margin-top: 30px;
+}
+
+.rangTime {
+    position: relative;
+}
+
+.rangTime i {
+    position: absolute;
+    right: 5px;
+    top: 7px;
+    font-size: 20px;
+    color: #3c8dbc;
+}
+
+table.dataTable {
+    border-bottom: 1px solid #ddd;
+}
+
+table.dataTable thead th, table.dataTable thead td {
+    border-bottom: 1px solid #ddd;
+}
+
+.notAllow {
+    cursor: not-allowed;
+    opacity: 0.5;
+}

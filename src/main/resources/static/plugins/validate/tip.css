@@ -1,0 +1,122 @@
+/*********�Զ���qTip��ʽ *********/
+.ce-valid-error {
+    /* border-color: #A94442; */
+}
+
+#ce-qtip-error-container {
+    position: fixed;
+    right: 15px;
+    bottom: 2px;
+    z-index: 1060;
+}
+
+#ce-qtip-error-container .qtip {
+    position: static;
+    min-height: 0;
+    overflow: hidden;
+    margin: 0 0 5px 0;
+}
+
+.ce-qtip.qtip {
+    border-radius: 3px;
+    box-shadow: 0 0 9px #999;
+    position: fixed;
+    border: none;
+}
+
+.ce-qtip.qtip * {
+    color: #FFFFFF;
+    font-size: 14px;
+}
+
+.ce-qtip.qtip .qtip-titlebar {
+    height: 20px;
+    background-color: transparent;
+}
+
+.ce-qtip.qtip .qtip-titlebar .qtip-title {
+    height: 14px;
+    color: transparent;
+}
+
+.ce-qtip.qtip .qtip-content {
+    line-height: 16px;
+    padding: 20px 30px 30px 60px;
+}
+
+.ce-qtip.qtip .qtip-titlebar .qtip-close {
+    position: absolute;
+    right: 5px;
+    top: 12px;
+    cursor: pointer;
+    outline: none;
+    border-width: 1px;
+    border-style: solid;
+    border-color: transparent;
+    background: transparent;
+    color: transparent;
+}
+
+.ce-qtip.qtip .qtip-icon .ui-icon {
+    width: 16px;
+    height: 16px;
+    line-height: 18px;
+    text-align: center;
+    text-indent: 0;
+    color: inherit;
+    opacity: 0.65;
+    background: transparent url("images/tip_close.png") no-repeat scroll 0 0;
+}
+
+.ce-qtip.qtip.ce-qtip-error.qtip-hover {
+    background-color: #cc2616;
+}
+
+.ce-qtip.qtip.qtip-hover .qtip-icon .ui-icon {
+    opacity: 1;
+}
+
+.qtip.ce-detail-qtip {
+    max-width: 600px;
+}
+
+.qtip.ce-detail-qtip ul {
+    margin: 0;
+    padding-left: 15px;
+}
+
+/***SUCCESS***/
+.ce-qtip.qtip.ce-qtip-success {
+    background-color: #71d445;
+}
+
+.ce-qtip.qtip.ce-qtip-success .qtip-content {
+    background: transparent url("images/tip_success.png") no-repeat scroll 26px 40%;
+}
+
+/***Error***/
+.ce-qtip.qtip.ce-qtip-error {
+    background-color: #e83d2c;
+}
+
+.ce-qtip.qtip.ce-qtip-error .qtip-content {
+    background: transparent url("images/tip_error.png") no-repeat scroll 26px 40%;
+}
+
+/***Info***/
+.ce-qtip.qtip.ce-qtip-info {
+    background-color: #54b9cd;
+}
+
+.ce-qtip.qtip.ce-qtip-info .qtip-content {
+    background: transparent url("images/tip_info.png") no-repeat scroll 26px 40%;
+}
+
+/***Warning***/
+.ce-qtip.qtip.ce-qtip-warning {
+    background-color: #ff8a0c;
+}
+
+.ce-qtip.qtip.ce-qtip-warning .qtip-content {
+    background: transparent url("images/tip_warning.png") no-repeat scroll 26px 40%;
+}

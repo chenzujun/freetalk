@@ -1,0 +1,13 @@
+<html xmlns:th="http://www.thymeleaf.org" layout:decorator="layout">
+
+<head th:include="layout :: htmlhead" th:with="title=#{dashboard.tip.home}">
+</head>
+
+<section layout:fragment="content">
+    <div class="content-wrapper">
+        <section class="content-header pin">
+            <span class="nav-title" th:text="#{dashboard.tip.home}"></span>
+        </section>
+    </div>
+</section>
+</html>

@@ -1,0 +1,52 @@
+<!--
+  ~ Copyright (c) 2005-2017.  FPX and/or its affiliates. All rights reserved.
+  ~ Use, Copy is subject to authorized license.
+  -->
+
+<div id="page-sidebar">
+    <aside class="main-sidebar" th:fragment="sidebar">
+        <section class="sidebar">
+            <i class="iconfont icon-sanshuxian sidebar-toggle" data-toggle="offcanvas" role="button"></i>
+            <ul class="sidebar-menu">
+                <!--Dashboard-->
+                <li class="leafnode active" id="li_fm_dashboard">
+                    <a th:href="@{/dashboard}">
+                        <i class="iconfont icon-folderfill"></i>
+                        <span th:text="#{dashboard.tip.control.panel}"></span>
+                    </a>
+                </li>
+                <a th:each="firstMenu: ${session.menus}" th:remove="tag">
+                    <a th:if="${firstMenu.children!=null}" th:remove="tag">
+                        <li class="treeview" th:id="${firstMenu.elementId}">
+                            <a th:href="@{${firstMenu.url}}">
+                                <i th:class="${firstMenu.style}"></i>
+                                <span th:text="#{${firstMenu.i18nCode}}"></span>
+                                <span class="pull-right-container">
+									<i class="iconfont icon-back pull-right"></i>
+								</span>
+                            </a>
+                            <ul class="treeview-menu">
+                                <a th:each="secondMenu: ${firstMenu.children}" th:remove="tag">
+                                    <li th:class="leafnode" th:id="${secondMenu.elementId}">
+                                        <a th:href="@{${secondMenu.url}}">
+                                            <i th:class="${secondMenu.style}"></i>
+                                            <span th:text="#{${secondMenu.i18nCode}}"></span>
+                                        </a>
+                                    </li>
+                                </a>
+                            </ul>
+                        </li>
+                    </a>
+                    <a th:if="${firstMenu.children==null}" th:remove="tag">
+                        <li class="leafnode" th:id="${firstMenu.elementId}">
+                            <a th:href="@{${firstMenu.url}}">
+                                <i th:class="${firstMenu.style}"></i>
+                                <span th:text="#{${firstMenu.i18nCode}}"></span>
+                            </a>
+                        </li>
+                    </a>
+                </a>
+            </ul>
+        </section>
+    </aside>
+</div>

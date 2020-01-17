@@ -66,6 +66,15 @@
             <version>${druid-spring-boot-starter.version}</version>
         </dependency>
 
+        <!--前端JAR包 -->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-thymeleaf</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>nz.net.ultraq.thymeleaf</groupId>
+            <artifactId>thymeleaf-layout-dialect</artifactId>
+        </dependency>
 
         <dependency>
             <groupId>com.alibaba</groupId>
@@ -153,9 +162,6 @@
             <resource>
                 <filtering>true</filtering>
                 <directory>src/main/resources/config</directory>
-                <includes>
-                    <include>application-${profiles.active}.properties</include>
-                </includes>
             </resource>
         </resources>
 

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2005-2017.  FPX and/or its affiliates. All rights reserved.
+  ~ Use, Copy is subject to authorized license.
+  -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="htmlhead">
+
+    <meta charset="utf-8"/>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!--ued css-->
+    <link rel="stylesheet" type="text/css"
+          href="http://static.i4px.com/fpxres/bootstrap/lastest/css/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.i4px.com/fpxres/iconfont/iconfont.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.i4px.com/fpxres/layer/lastest/css/layer.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.css"/>
+    <link rel="stylesheet" type="text/css" href="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.override.css"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://static.i4px.com/fpxres/ued/lastest/fpxres/ued/lastest/fpx.ued.theme.css}"/>
+    <link rel="stylesheet" type="text/css"
+          href="http://static.i4px.com/fpxres/datatables/lastest/dataTables.bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/select2/lastest/select2.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/select2/lastest/select2.bootstrap.css"/>
+
+    <!-- validate -->
+    <link rel="stylesheet" type="text/css" href="plugins/validate/jquery.qtip.min.css"
+          th:href="@{/plugins/validate/jquery.qtip.min.css}"/>
+    <link rel="stylesheet" type="text/css" href="plugins/validate/tip.css" th:href="@{/plugins/validate/tip.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/led.css" th:href="@{/css/led.css}"/>
+
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var CTX = /*[[${#httpServletRequest.getContextPath()}]]*/;
+        /*]]>*/
+    </script>
+</head>
+
+<body class="fpx skin-blue hold-transition sidebar-mini">
+<div th:fragment="navbar" class="wrapper" role="navigation">
+    <div th:replace="fragments/header :: header">Header</div>
+    <div layout:fragment="content" id="content"></div>
+    <div layout:fragment="js_layout" id="js_layout"></div><!--页面js-->
+</div>
+
+</body>
+</html>

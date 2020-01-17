@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<!--
+  ~ Copyright (c) 2005-2018.  FPX and/or its affiliates. All rights reserved.
+  ~ Use, Copy is subject to authorized license.
+  -->
+<html xmlns:th="http://www.thymeleaf.org">
+<head th:fragment="htmlhead">
+
+    <meta charset="utf-8"/>
+    <title th:text="${title}"></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+    <meta content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no" name="viewport"/>
+    <meta name="renderer" content="webkit"/>
+    <link rel="icon" href="img/favicon.ico" type="image/x-icon"/>
+    <link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon"/>
+    <!--ued css-->
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/bootstrap/lastest/css/bootstrap.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/iconfont/iconfont.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/layer/lastest/css/layer.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.override.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/ued/lastest/fpx.ued.theme.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/datatables/lastest/dataTables.bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/select2/lastest/select2.min.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/select2/lastest/select2.bootstrap.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/ztree/lastest/css/iconStyle/iconStyle.css"/>
+    <link type="text/css" rel="stylesheet" href="http://static.i4px.com/fpxres/preferences/jedate.css"/>
+
+    <!-- validate -->
+    <link rel="stylesheet" type="text/css" href="plugins/validate/jquery.qtip.min.css" th:href="@{/plugins/validate/jquery.qtip.min.css}"/>
+    <link rel="stylesheet" type="text/css" href="plugins/validate/tip.css" th:href="@{/plugins/validate/tip.css}"/>
+    <link rel="stylesheet" type="text/css" href="css/led.css" th:href="@{/css/led.css}"/>
+
+    <script th:inline="javascript">
+        /*<![CDATA[*/
+        var CTX = /*[[${#httpServletRequest.getContextPath()}]]*/;
+        /*]]>*/
+        /*<![CDATA[*/
+        var USER_ID = /*[[${userId}]]*/;
+        /*]]>*/
+        /*<![CDATA[*/
+        var TRACK_SEARCH = /*[[${@environment.getProperty("fegin.xms.track.search")}]]*/;
+        /*]]>*/
+    </script>
+</head>
+
+<body class="fpx skin-blue hold-transition sidebar-mini">
+<div th:fragment="navbar" class="wrapper" role="navigation">
+    <!-- 头部 -->
+    <header class="main-header"></header>
+    <!-- 左菜单-->
+    <aside class="main-sidebar"></aside>
+    <!--<div th:replace="fragments/header :: header">Header</div>-->
+    <!--<div th:replace="fragments/sidebar :: sidebar">sidebar</div>-->
+    <div layout:fragment="content" id="content content-wrapper"></div>
+    <div th:replace="fragments/footer :: footer">footer</div>
+    <div layout:fragment="js_layout" id="js_layout"></div><!--页面js-->
+</div>
+
+</body>
+</html>

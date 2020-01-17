@@ -1,0 +1,29 @@
+.info_box {
+    padding: 15px 30px;
+}
+
+.left_logo_box, .right_content {
+    float: left;
+    min-height: 200px;
+}
+
+.left_logo_box {
+    width: 180px;
+    line-height: 200px;
+    text-align: center;
+    margin-right: 45px;
+}
+
+.left_logo {
+    vertical-align: middle;
+    display: inline-block;
+    width: 180px;
+}
+
+.right_content_top {
+    min-height: 80px;
+}
+
+.right_content_btn {
+    margin-top: 30px;
+}
